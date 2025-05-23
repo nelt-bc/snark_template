@@ -27,7 +27,7 @@ mkdir -p "$BUILD_DIR"
 
 # 1. Compile circuit
 echo "🛠️ Compiling circuit..."
-npx circom "$CIRCUIT_PATH" -r "${BUILD_DIR}/${CIRCUIT_NAME}.r1cs" -w "${BUILD_DIR}/${CIRCUIT_NAME}.wasm" -s "${BUILD_DIR}/${CIRCUIT_NAME}.sym"
+circom "$CIRCUIT_PATH" -r "${BUILD_DIR}/${CIRCUIT_NAME}.r1cs" -w "${BUILD_DIR}/${CIRCUIT_NAME}.wasm" -s "${BUILD_DIR}/${CIRCUIT_NAME}.sym"
 
 # 2. Trusted setup (if needed)
 if [ ! -f "$PTAU_PATH" ]; then
