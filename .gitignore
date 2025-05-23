@@ -19,3 +19,4 @@ ignition/deployments/chain-31337
 db
 build
 zk/build
+contracts/*Verifier.sol

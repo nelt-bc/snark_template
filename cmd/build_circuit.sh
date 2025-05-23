@@ -62,6 +62,6 @@ npx snarkjs groth16 verify "${KEY_DIR}/verification_key.json" "${BUILD_DIR}/publ
 
 # 7. Solidity verifier
 echo "🧾 Exporting Solidity verifier..."
-npx snarkjs zkey export solidityverifier "${KEY_DIR}/${CIRCUIT_NAME}_final.zkey" "${BUILD_DIR}/verifier.sol"
+npx snarkjs zkey export solidityverifier "${KEY_DIR}/${CIRCUIT_NAME}_final.zkey" "contracts/${CIRCUIT_NAME}Verifier.sol"
 
 echo "🎉 Done! Output in: ${BUILD_DIR}"
